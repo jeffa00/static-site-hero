@@ -11,16 +11,12 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello",
         "onCommand:extension.insertLink",
         "onCommand:extension.insertFigure"
 	],
 	"main": "./extension",
 	"contributes": {
 		"commands": [{
-			"command": "extension.sayHello",
-			"title": "Hello World"
-		},{
             "command":"extension.insertLink",
             "title": "Insert Markdown Link to File or Image"
         },{
