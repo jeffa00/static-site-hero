@@ -11,14 +11,33 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello"
+		"onCommand:extension.sayHello",
+        "onCommand:extension.insertLink",
+        "onCommand:extension.insertFigure"
 	],
 	"main": "./extension",
 	"contributes": {
 		"commands": [{
 			"command": "extension.sayHello",
 			"title": "Hello World"
-		}]
+		},{
+            "command":"extension.insertLink",
+            "title": "Insert Markdown Link to File or Image"
+        },{
+            "command": "extension.insertFigure",
+            "title": "Insert HTML Figure"
+        }],
+        "keybindings": [{
+            "command": "extension.insertLink",
+            "key": "shift+ctrl+l",
+            "mac": "shift+cmd+l",
+            "when": "editorTextFocus"
+        },{
+            "command": "extension.insertFigure",
+            "key": "shift+ctrl+f",
+            "mac": "shift+cmd+f",
+            "when": "editorTextFocus"
+        }]
 	},
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install"
