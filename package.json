@@ -4,6 +4,19 @@
 	"description": "Helps with writing posts for static site generator.",
 	"version": "0.0.1",
 	"publisher": "jeffaTech",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeffa00/static-site-hero.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jeffa00/static-site-hero/issues"
+    },
+    "homepage": "https://github.com/jeffa00/static-site-hero/blob/master/README.md",
+    "icon": "images/StaticSiteHeroLogo.png",
+    "galleryBanner": {
+        "color": "#96DFFF",
+        "theme": "dark"
+    },
 	"engines": {
 		"vscode": "^0.10.6"
 	},
