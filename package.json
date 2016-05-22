@@ -2,7 +2,7 @@
 	"name": "static-site-hero",
 	"displayName": "Static Site Hero",
 	"description": "Helps with writing posts for static site generator.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "jeffaTech",
     "repository": {
         "type": "git",
@@ -15,7 +15,7 @@
     "icon": "images/StaticSiteHeroLogo.png",
     "galleryBanner": {
         "color": "#96DFFF",
-        "theme": "dark"
+        "theme": "light"
     },
 	"engines": {
 		"vscode": "^0.10.6"
