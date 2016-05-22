@@ -74,14 +74,12 @@ function activate(context) {
 
         vscode.window.showQuickPick(linkTypeList, {placeHolder: 'Link Type'})
             .then(result => {
-               //insertText(result);
 
                if (result === 'File') {
                    insertText("[Link Text](" + updateTemplateWithDate(getFileTemplate()) + ")");
                } else if (result === 'Image') {
                    insertText("![Alt Text](" + updateTemplateWithDate(getImageTemplate()) + ")");
                }
-
             });
     });
 
