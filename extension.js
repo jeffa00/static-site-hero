@@ -29,7 +29,7 @@ let insertText = (value) => {
   });
 };
 
-let getImageTemplate = () => {
+let getImageTemplate = ( ) => {
   return vscode.workspace.getConfiguration("staticSiteHero")["imagePathTemplate"];
 };
 
@@ -86,14 +86,11 @@ function activate(context) {
     });
 
     context.subscriptions.push(fileLinkDisposable);
-
     let figureDisposable = vscode.commands.registerCommand('extension.insertFigure', () => {
         let template = getImageTemplate();
         template = updateTemplateWithDate(template);
-
-        let cssWidthClassList = vscode.workspace.getConfiguration("staticSiteHero")["widthCssClasses"];
+                let cssWidthClassList = vscode.workspace.getConfiguration("staticSiteHero")["widthCssClasses"];
         let cssAlignmentClassList = vscode.workspace.getConfiguration("staticSiteHero")["alignmentCssClasses"];
-
         let figOptions = {
           imageName: '',
           altText: '',
@@ -102,7 +99,6 @@ function activate(context) {
           cssWidthClass: '',
           cssAlignmentClass: ''
         };
-
         vscode.window.showInputBox({ prompt: "Image File Name" })
             .then(value => {
                 figOptions.imageName = value;
@@ -115,7 +111,7 @@ function activate(context) {
                     });
             })
             .then(() => {
-                return vscode.window.showQuickPick(cssWidthClassList, { placeHolder: "Width Class"})
+                return vscode.window.showQuickPick(cssWidthClassList, { placeHolder: "Width Class" })
                     .then(result => {
                        figOptions.cssWidthClass = result;
                     });
@@ -123,8 +119,8 @@ function activate(context) {
             .then(() => {
                 return vscode.window.showQuickPick(cssAlignmentClassList, { placeHolder: "Alignment Class"})
                     .then(result => {
-                       figOptions.cssAlignmentClass = result;
-                    });
+                        figOptions.cssAlignmentClass = result;
+                    })
             })
             .then(() => {
                 insertText(fillFigureTemplate(figOptions));
