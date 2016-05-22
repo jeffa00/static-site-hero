@@ -75,6 +75,6 @@ Under User Preferences you can override the following configuration settings:
 	]
 ```
 
-   ## Update Log
-   ### 1.0.0
-   Initial Publication
+## Update Log
+### 1.0.0
+Initial Publication
