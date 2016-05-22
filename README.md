@@ -76,5 +76,9 @@ Under User Preferences you can override the following configuration settings:
 ```
 
 ## Update Log
+### 1.0.2
+Modified this readme to show the 1.0.1 log update...
+### 1.0.1
+Switched Marketplace Banner text from dark to light
 ### 1.0.0
 Initial Publication

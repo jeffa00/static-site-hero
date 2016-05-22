@@ -1,9 +1,9 @@
 {
-	"name": "static-site-hero",
-	"displayName": "Static Site Hero",
-	"description": "Helps with writing posts for static site generator.",
-	"version": "1.0.0",
-	"publisher": "jeffaTech",
+    "name": "static-site-hero",
+    "displayName": "Static Site Hero",
+    "description": "Helps with writing posts for static site generator.",
+    "version": "1.0.2",
+    "publisher": "jeffaTech",
     "repository": {
         "type": "git",
         "url": "https://github.com/jeffa00/static-site-hero.git"
@@ -17,18 +17,18 @@
         "color": "#96DFFF",
         "theme": "light"
     },
-	"engines": {
-		"vscode": "^0.10.6"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
+    "engines": {
+        "vscode": "^0.10.6"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
         "onCommand:extension.insertLink",
         "onCommand:extension.insertFigure"
-	],
-	"main": "./extension",
-	"contributes": {
+    ],
+    "main": "./extension",
+    "contributes": {
         "configuration": {
             "type": "object",
             "title": "Static Site Hero Configuration",
@@ -43,41 +43,54 @@
                     "default": "/files/${year}/${month}/",
                     "description": "Specifies the folder containing files."
                 },
-                "staticSiteHero.widthCssClasses":{
+                "staticSiteHero.widthCssClasses": {
                     "type": "array",
-                    "default": ["full-width","half-width","quarter-width"],
+                    "default": [
+                        "full-width",
+                        "half-width",
+                        "quarter-width"
+                    ],
                     "description": "Array of strings representing possible CSS Classes for width"
                 },
                 "staticSiteHero.alignmentCssClasses": {
                     "type": "array",
-                    "default": ["left","right"],
+                    "default": [
+                        "left",
+                        "right"
+                    ],
                     "description": "Array of strings representing possible CSS Classes for alignment"
                 }
             }
         },
-		"commands": [{
-            "command":"extension.insertLink",
-            "title": "Insert Markdown Link to File or Image"
-        },{
-            "command": "extension.insertFigure",
-            "title": "Insert HTML Figure"
-        }],
-        "keybindings": [{
-            "command": "extension.insertLink",
-            "key": "shift+ctrl+l",
-            "mac": "shift+cmd+l",
-            "when": "editorTextFocus"
-        },{
-            "command": "extension.insertFigure",
-            "key": "shift+ctrl+f",
-            "mac": "shift+cmd+f",
-            "when": "editorTextFocus"
-        }]
-	},
+        "commands": [
+            {
+                "command": "extension.insertLink",
+                "title": "Insert Markdown Link to File or Image"
+            },
+            {
+                "command": "extension.insertFigure",
+                "title": "Insert HTML Figure"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.insertLink",
+                "key": "shift+ctrl+l",
+                "mac": "shift+cmd+l",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.insertFigure",
+                "key": "shift+ctrl+f",
+                "mac": "shift+cmd+f",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"vscode": "^0.11.0"
-	}
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
 }
