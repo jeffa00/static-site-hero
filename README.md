@@ -73,7 +73,7 @@ Under User Preferences you can override the following configuration settings:
 		"left",
 		"right"
 	]
-    ```
+```
 
    ## Update Log
    ### 1.0.0
